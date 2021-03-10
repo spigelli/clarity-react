@@ -2,12 +2,19 @@
 
 This project an unofficial implementation of [VMware Clarity Design](https://clarity.design) in React. It leverages CSS, icons and images from the Clarity project. 
 
-## Usage in React projects
+## Installation
 
-To use the project simply add the dependencies with `yarn`, `npm`, etc:
-```shell
-$ yarn add @dell/clarity-react
+#### Append to package.json
+```package.json
+"@dell/clarity-react": "https://github.com/EMCECS/clarity-react/archive/0.22.5.tar.gz"
 ```
+
+### In your project directory
+```bash
+$ npm install @dell/clarity-react
+$ cd node_modules/@dell/clarity-react && make && cd -
+```
+## Usage in React projects
 
 Import styles and globals from peer dependencies:
 
@@ -26,7 +33,7 @@ And make use of the components in your app:
 #### `App.tsx`
 ```typescript jsx
 import React, {Component} from 'react';
-import MainContainer from "@dell/clarity-react/layout/main-container/MainContainer";
+import MainContainer from "@dell/dist/clarity-react/layout/main-container/MainContainer";
 
 const initialState = {
 };
@@ -44,7 +51,7 @@ export default class MainPage extends Component<MainPageProps> {
 
     render() {
         return(
-            <MainContainer>
+            <MainContainer title="Title">
                 Hello
             </MainContainer>
         );
